@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Agri Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="payment-styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/2138/2138508.png" alt="Agri Shop Logo">
+                <h1>Agri Shop</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li id="userSection"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="payment-container">
+        <div class="payment-wrapper">
+            <h2>Payment Details</h2>
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-details">
+                    <p>Subtotal: <span id="subtotal">₹0</span></p>
+                    <p>Shipping: <span>₹40</span></p>
+                    <p class="total">Total: <span id="total">₹0</span></p>
+                </div>
+            </div>
+
+            <form id="paymentForm" class="payment-form">
+                <div class="form-section">
+                    <h3>Shipping Address</h3>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Address Line 1" required>
+                    <input type="text" placeholder="Address Line 2">
+                    <div class="form-row">
+                        <input type="text" placeholder="City" required>
+                        <input type="text" placeholder="State" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="PIN Code" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Payment Method</h3>
+                    <div class="payment-methods">
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="card">
+                            <span>Credit/Debit Card</span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="upi" checked>
+                            <span>UPI</span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="cod">
+                            <span>Cash on Delivery</span>
+                        </label>
+                    </div>
+
+                    <div id="cardPayment" class="payment-details hidden">
+                        <input type="text" placeholder="Card Number" required>
+                        <div class="form-row">
+                            <input type="text" placeholder="MM/YY" required>
+                            <input type="text" placeholder="CVV" required>
+                        </div>
+                        <input type="text" placeholder="Card Holder Name" required>
+                    </div>
+
+                    <div id="upiPayment" class="payment-details">
+                        <div class="qr-container">
+                            <img src="QR.jpg" alt="UPI QR Code" class="qr-image">
+                        </div>
+                        <p class="upi-instructions">Scan the QR code with any UPI app to pay</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="pay-now-btn">Pay Now</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="payment.js"></script>
+</body>
+</html> 

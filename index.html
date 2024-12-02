@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Shop - Your One-Stop Farm Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/2138/2138508.png" alt="Agri Shop Logo">
+                <h1>Agri Shop</h1>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="userSection">
+                    <a href="login.html" id="loginLink">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Agri Shop</h1>
+            <p>Your one-stop destination for quality agricultural products</p>
+            <a href="#products" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be added dynamically via JavaScript -->
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <img src="https://img.freepik.com/free-photo/farmer-standing-wheat-field_329181-9419.jpg" alt="Farmer in field">
+            <div class="about-text">
+                <p>We are committed to providing farmers with the best quality agricultural products and tools. With years of experience in the agricultural sector, we understand the needs of modern farming.</p>
+                <p>Our mission is to support sustainable farming practices while making quality farming supplies accessible to everyone.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Agri Shop. All rights reserved.</p>
+    </footer>
+
+    <!-- Google Translate Element -->
+    <div id="google_translate_element" style="position: fixed; bottom: 20px; right: 20px;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="script.js"></script>
+</body>
+</html> 

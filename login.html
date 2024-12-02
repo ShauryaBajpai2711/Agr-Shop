@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Agri Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login to Agri Shop</h2>
+            <div class="login-type-selector">
+                <button class="type-btn active" data-type="buyer">Buyer</button>
+                <button class="type-btn" data-type="seller">Seller</button>
+            </div>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+        </div>
+
+        <div class="register-box hidden">
+            <h2>Register for Agri Shop</h2>
+            <div class="login-type-selector">
+                <button class="type-btn active" data-type="buyer">Buyer</button>
+                <button class="type-btn" data-type="seller">Seller</button>
+            </div>
+            <form id="registerForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html> 
