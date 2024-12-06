@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-    // Display items
+    // Display items with quantity and price details
     const itemsList = document.getElementById('itemsList');
     order.items.forEach(item => {
         // Get seller name
@@ -67,8 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>${item.name}</h4>
                 <p>${item.description}</p>
                 <p class="seller-info">Sold by: ${sellerName}</p>
+                <p class="quantity-info">Quantity: ${item.quantity}</p>
+                <p class="price-info">Unit Price: ₹${item.price}</p>
             </div>
-            <div class="item-price">₹${item.price}</div>
+            <div class="item-price">
+                <p class="total-price">₹${item.totalPrice}</p>
+                <p class="price-calculation">(₹${item.price} × ${item.quantity})</p>
+            </div>
         `;
         itemsList.appendChild(itemElement);
     });

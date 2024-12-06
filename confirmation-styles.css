@@ -148,4 +148,28 @@
     .confirmation-wrapper {
         box-shadow: none;
     }
+}
+
+.quantity-info,
+.price-info {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 3px 0;
+}
+
+.price-calculation {
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.total-price {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1.1rem;
+}
+
+.item-price {
+    text-align: right;
+    min-width: 120px;
 } 
